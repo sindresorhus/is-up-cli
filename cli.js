@@ -8,6 +8,8 @@ const cli = meow(`
 	Example
 	  $ is-up sindresorhus.com
 	  ${logSymbols.success} Up
+
+	Exits with code 0 if up and 2 if down
 `);
 
 if (cli.input.length === 0) {
@@ -15,7 +17,8 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-isUp(cli.input[0]).then(up => {
+(async () => {
+	const up = await isUp(cli.input[0]);
 	console.log(up ? `${logSymbols.success} Up` : `${logSymbols.error} Down`);
 	process.exit(up ? 0 : 2);
-});
+})();

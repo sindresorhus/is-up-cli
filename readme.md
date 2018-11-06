@@ -1,8 +1,8 @@
 # is-up-cli [![Build Status](https://travis-ci.org/sindresorhus/is-up-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/is-up-cli)
 
-> Check whether a website is up or down using the [isitup.org](http://isitup.org) API
+> Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
-<img src="screenshot.png" width="336">
+<img src="screenshot.png" width="833" height="350">
 
 
 ## Install
@@ -19,7 +19,9 @@ $ is-up --help
 
   Example
     $ is-up sindresorhus.com
-    ✔︎ Up
+    ✔ Up
+
+  Exits with code 0 if up and 2 if down
 ```
 
 
@@ -30,4 +32,4 @@ $ is-up --help
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
