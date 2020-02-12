@@ -4,6 +4,7 @@
 	"description": "Check whether a website is up or down",
 	"license": "MIT",
 	"repository": "sindresorhus/is-up-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -13,7 +14,7 @@
 		"is-up": "cli.js"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -35,14 +36,15 @@
 		"offline"
 	],
 	"dependencies": {
-		"is-up": "^3.0.0",
-		"log-symbols": "^2.2.0",
-		"meow": "^5.0.0"
+		"is-up": "^4.0.0",
+		"log-symbols": "^3.0.0",
+		"meow": "^6.0.0",
+		"prepend-http": "^3.0.1"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"execa": "^1.0.0",
-		"strip-ansi": "^5.0.0",
-		"xo": "^0.23.0"
+		"ava": "^1.0.0",
+		"execa": "^4.0.0",
+		"strip-ansi": "^6.0.0",
+		"xo": "^0.25.4"
 	}
 }

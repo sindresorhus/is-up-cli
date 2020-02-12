@@ -4,13 +4,11 @@
 
 <img src="screenshot.png" width="833" height="350">
 
-
 ## Install
 
 ```
 $ npm install --global is-up-cli
 ```
-
 
 ## Usage
 
@@ -24,12 +22,6 @@ $ is-up --help
   Exits with code 0 if up and 2 if down
 ```
 
-
 ## Related
 
 - [is-up](https://github.com/sindresorhus/is-up) - API for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -3,6 +3,7 @@
 const meow = require('meow');
 const logSymbols = require('log-symbols');
 const isUp = require('is-up');
+const prependHttp = require('prepend-http');
 
 const cli = meow(`
 	Example
@@ -18,7 +19,7 @@ if (cli.input.length === 0) {
 }
 
 (async () => {
-	const up = await isUp(cli.input[0]);
+	const up = await isUp(prependHttp(cli.input[0]));
 	console.log(up ? `${logSymbols.success} Up` : `${logSymbols.error} Down`);
-	process.exit(up ? 0 : 2);
+	process.exitCode = up ? 0 : 2;
 })();
