@@ -1,4 +1,4 @@
-# is-up-cli [![Build Status](https://travis-ci.org/sindresorhus/is-up-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/is-up-cli)
+# is-up-cli
 
 > Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
