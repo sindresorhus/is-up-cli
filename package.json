@@ -8,13 +8,14 @@
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
 	"bin": {
-		"is-up": "cli.js"
+		"is-up": "./cli.js"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -36,15 +37,15 @@
 		"offline"
 	],
 	"dependencies": {
-		"is-up": "^4.0.0",
-		"log-symbols": "^3.0.0",
-		"meow": "^6.0.0",
-		"prepend-http": "^3.0.1"
+		"is-up": "^5.0.0",
+		"log-symbols": "^5.0.0",
+		"meow": "^10.1.1",
+		"prepend-http": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.0.0",
-		"execa": "^4.0.0",
-		"strip-ansi": "^6.0.0",
-		"xo": "^0.25.4"
+		"ava": "^3.15.0",
+		"execa": "^5.1.1",
+		"strip-ansi": "^7.0.1",
+		"xo": "^0.44.0"
 	}
 }

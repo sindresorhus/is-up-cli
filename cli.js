@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const logSymbols = require('log-symbols');
-const isUp = require('is-up');
-const prependHttp = require('prepend-http');
+import process from 'node:process';
+import meow from 'meow';
+import logSymbols from 'log-symbols';
+import isUp from 'is-up';
+import prependHttp from 'prepend-http';
 
 const cli = meow(`
 	Example
@@ -11,15 +11,17 @@ const cli = meow(`
 	  ${logSymbols.success} Up
 
 	Exits with code 0 if up and 2 if down
-`);
+`, {
+	importMeta: import.meta,
+});
 
 if (cli.input.length === 0) {
 	console.error('Specify a URL');
-	process.exit(1);
+	process.exitCode = 1;
+} else {
+	(async () => {
+		const up = await isUp(prependHttp(cli.input[0]));
+		console.log(up ? `${logSymbols.success} Up` : `${logSymbols.error} Down`);
+		process.exitCode = up ? 0 : 2;
+	})();
 }
-
-(async () => {
-	const up = await isUp(prependHttp(cli.input[0]));
-	console.log(up ? `${logSymbols.success} Up` : `${logSymbols.error} Down`);
-	process.exitCode = up ? 0 : 2;
-})();

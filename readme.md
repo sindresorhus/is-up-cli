@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install --global is-up-cli
+```sh
+npm install --global is-up-cli
 ```
 
 ## Usage
