@@ -2,7 +2,7 @@
 
 > Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
-<img src="screenshot.png" width="833" height="350">
+<img src="screenshot.png" width="833">
 
 ## Install
 
