@@ -6,12 +6,21 @@
 
 ## Install
 
+### Manually
+
 ```sh
 npm install --global is-up-cli
 ```
 
+### With Docker
+```bash
+docker build -t is-up-cli .
+
+```
+
 ## Usage
 
+### Manually
 ```
 $ is-up --help
 
@@ -20,7 +29,16 @@ $ is-up --help
     ✔ Up
 
   Exits with code 0 if up and 2 if down
+
 ```
+
+### With Docker
+
+```bash
+docker run is-up-cli sindresorhus.com
+
+```
+
 
 ## Related
 
